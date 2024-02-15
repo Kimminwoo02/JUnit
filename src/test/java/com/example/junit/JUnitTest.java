@@ -27,6 +27,13 @@ public class JUnitTest {
 
     }
 
+    @RepeatedTest(10)
+    void repeatTest(RepetitionInfo repetitionInfo){
+
+        System.out.println("테스트 반복" + repetitionInfo.getCurrentRepetition());
+        System.out.println("테스트 반복" + repetitionInfo.getTotalRepetitions());
+    }
+
     @BeforeAll // 모든 테스트가 실행되기 전 동작한다. static으로 선언해야 된다.
     static void beforeAll(){
         System.out.println("before All");
