@@ -9,7 +9,8 @@ import static org.junit.jupiter.api.Assertions.assertNotNull;
 public class JUnitTest {
     @Test
     @DisplayName("스터디 만들기")
-    @Tag("fast")
+    // @Tag("fast")
+    @FastTest
     void create(){
         System.out.println("create1");
         Study study = new Study();
@@ -19,7 +20,8 @@ public class JUnitTest {
 
     @Test
     @Disabled
-    @Tag("slow")
+    // @Tag("slow")
+    @SlowTest
     void createTest(){
         System.out.println("create2 느린 테스트");
 
