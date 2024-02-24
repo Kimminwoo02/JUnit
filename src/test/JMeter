@@ -17,4 +17,11 @@ JMeter
     - Sample : 어떤 유저가 해야하는 액션
     - Configuration : Sampler 또는 Listener가 사용한 설정 값 (쿠키, JDBC 커낵션 등)
     - Assertion : 응답이 성공적인지 확인하는 방법(응답 코드, 본문 내용 등)
+
+압축폴더에서 bin으로 접속 후 terminal에서 실행한다.
+
+Get/테스트명 -> Thread properties :
+ - number of Threads = 1초 안에 n 개의 쓰레드를 생성
+ - Ramp-up period : roof를 n개로 정의
+ - Sampler : RestAPI 정의 후 테스트
  
