@@ -22,3 +22,11 @@
   - 예외 발생
   - 애플리케이션 종료
   - 메모리 누수
+
+활성화 방법
+http 파일을 이용해서 체크할 수 있다.
+
+http POST localhost:8080/actuator/chaosmonkey/enable
+
+공격 진행시 레벨 10일 경우 10번 요청 받을 때 한번 꼴로 공격을 하다. 즉 비율을 조정할 수 있게 된다.  지연시간은 2초~5초 사이이다.
+http POST localhost:8080/actuator/chaosmonkey/assualts level=3 latencyRangeStart=2000 latencyRangeEnd=5000 latencyActive=true

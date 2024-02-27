@@ -24,4 +24,3 @@ Get/테스트명 -> Thread properties :
  - number of Threads = 1초 안에 n 개의 쓰레드를 생성
  - Ramp-up period : roof를 n개로 정의
  - Sampler : RestAPI 정의 후 테스트
- 
