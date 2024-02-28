@@ -30,3 +30,6 @@ http POST localhost:8080/actuator/chaosmonkey/enable
 
 공격 진행시 레벨 10일 경우 10번 요청 받을 때 한번 꼴로 공격을 하다. 즉 비율을 조정할 수 있게 된다.  지연시간은 2초~5초 사이이다.
 http POST localhost:8080/actuator/chaosmonkey/assualts level=3 latencyRangeStart=2000 latencyRangeEnd=5000 latencyActive=true
+
+10번 중 3번은 에러가 발생하는데 에러내역을 뒤에 설정할 수 있다. RuntimeException
+http POST localhost:8080/acutuator/chaosmonkey/assaults level=3 latencyActive=false exceptionActive=true exception.type=java.lang.RuntimeException
