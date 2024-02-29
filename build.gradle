@@ -21,6 +21,7 @@ dependencies {
     implementation 'de.codecentric:chaos-monkey-spring-boot:2.6.1'
     implementation 'org.springframework.boot:spring-boot-starter-actuator'
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
+    testImplementation 'com.tngtech.archunit:archunit-junit5:0.17.0'
     testImplementation "org.testcontainers:junit-jupiter"
 }
 
