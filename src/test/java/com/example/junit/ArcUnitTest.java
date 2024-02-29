@@ -14,9 +14,11 @@ public class ArcUnitTest {
         JavaClasses importedClass = new ClassFileImporter().importPackages("com.example.junit");
 
         ArchRule myRule = clases().that().residenInAPackage("..service..")
-                .should().onlyBeAccessed().byAnyPackage("..controller..","..service..");
+                .should().onlyBeAccessed().byClassesThat()
+                        .resideInAnyPackage("..study..","..member..","..domain..");
+        domainPackageRule.check(classes);
 
-        myRule.check(importedClasses);
-        
     }
+
+
 }
