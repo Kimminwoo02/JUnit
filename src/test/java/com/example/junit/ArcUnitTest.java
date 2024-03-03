@@ -43,4 +43,19 @@ public class ArcUnitTest {
 
 
 
+    @ArchTest
+    ArchRule controllerClassRule = classes().that().haveSimpleNameEndingWith("Controller")
+            .should().accessClassesThat().haveSimpleNameEndingWith("Service")
+            .orShould().accessClassesThat().haveSimpleNameEndingWith("Repository");
+
+
+    @ArchTest
+    ArchRule repositoryClasssRule = classes().that().haveSimpleNameEndingWith("Repository")
+            .should().accessClassesThat().haveSimpleNameEndingWith("Service");
+
+    @ArchTest
+    ArchRule studyClassesRule = classes().that().haveSimpleNameEndingWith("Study")
+            .and().areNotEnums()
+            .and().areNotAnnotatedWith(Entity.class)
+            .should().resideInAnyPackage("..study..")
 }
